@@ -1,17 +1,4 @@
 #!/usr/bin/env python3
-"""Comparative offline evaluation of three recommender systems on KuaiRec.
-
-Models:
-  1. Item-item collaborative filtering (cosine similarity over watch_ratio).
-  2. Content-based filtering (video-category profile weighted by watch_ratio).
-  3. Hybrid model (0.5 * normalized collaborative + 0.5 * normalized content).
-
-Input: official KuaiRec.zip from https://kuairec.com/ (or its Zenodo record).
-The script reads small_matrix.csv and item_categories.csv directly from the ZIP.
-
-IMPORTANT: watch_ratio >= 1.0 is used only as an operational proxy for a complete
-view, not as an explicit like, satisfaction score, or ground truth of preference.
-"""
 from __future__ import annotations
 
 import argparse
